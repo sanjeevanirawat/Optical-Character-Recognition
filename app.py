@@ -1,10 +1,9 @@
-import streamlit as st
+import streamlit as st 
 from PIL import Image
 import pytesseract
 import numpy as np
-import cv2
 
-# The tesseract_cmd line is removed to avoid OS-level dependencies in cloud deployment
+# No need to set tesseract_cmd since Render will install it system-wide.
 
 # Set up the Streamlit interface with custom CSS for dark pink color
 st.markdown(
