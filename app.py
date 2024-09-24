@@ -84,4 +84,3 @@ if uploaded_file is not None:
 
     except pytesseract.TesseractNotFoundError:
         st.error("Tesseract is not installed or not found in your system PATH. Please install Tesseract and try again.")
-
