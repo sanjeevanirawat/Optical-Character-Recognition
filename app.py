@@ -4,8 +4,9 @@ import pytesseract
 import numpy as np
 import cv2
 
-# Specify the path to the Tesseract executable (Windows only)
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+# Set the Tesseract executable path for Linux
+pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'  # Ensure this path is correct
+
 
 # Set up the Streamlit interface with custom CSS for dark pink color
 st.markdown(
@@ -84,3 +85,4 @@ if uploaded_file is not None:
 
     except pytesseract.TesseractNotFoundError:
         st.error("Tesseract is not installed or not found in your system PATH. Please install Tesseract and try again.")
+
