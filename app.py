@@ -4,9 +4,7 @@ import pytesseract
 import numpy as np
 import cv2
 
-# Set the Tesseract executable path for Linux
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'  # Ensure this path is correct
-
+# The tesseract_cmd line is removed to avoid OS-level dependencies in cloud deployment
 
 # Set up the Streamlit interface with custom CSS for dark pink color
 st.markdown(
@@ -27,7 +25,7 @@ st.markdown(
     .stFileUploader {
         background-color: white;     /* White background for the file uploader */
         color: black;                /* Black text for the file uploader */
-        border-radius: 10px;        /* Rounded corners */
+        border-radius: 10px;         /* Rounded corners */
         padding: 10px;              /* Padding for a better look */
     }
 
@@ -85,4 +83,3 @@ if uploaded_file is not None:
 
     except pytesseract.TesseractNotFoundError:
         st.error("Tesseract is not installed or not found in your system PATH. Please install Tesseract and try again.")
-
