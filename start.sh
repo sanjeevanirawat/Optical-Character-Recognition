@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Install Tesseract
-apt-get update && apt-get install -y tesseract-ocr
+# Install Tesseract OCR
+apt-get update && apt-get install -y tesseract-ocr tesseract-ocr-hin
 
-# Start the Streamlit app
-streamlit run app.py --server.port $PORT --server.address 0.0.0.0
+# Start the Streamlit application
+streamlit run app.py
